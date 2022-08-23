@@ -4,13 +4,11 @@ require 'sinatra'
 # Definir ruta --> get post patch put & delete
 
 get '/' do
-  unless params[:nombre]
-    "Hola desconocido"
+  if params[:nombre]
+    @nombre = params[:nombre]
+    erb :index
   else
-  @name = params[:nombre]
-  <<-HTML
-    <h1>Hola <%=@name%></h1>
-  HTML
+    "Hola desconocido"
   end
 end
 
