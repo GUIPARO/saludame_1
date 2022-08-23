@@ -6,13 +6,13 @@ require "sinatra/reloader" if development?
 
 get '/' do
   if params[:nombre] && params[:nombre] != ""
-    <<-HTML
-       <h1>Hola #{params[:nombre]}!</h1>
-    HTML
-  else
-    <<-HTML
-       <h1>Hola desconocido</h1>
-    HTML
-  end
+		<<-HTML
+			<h1>Hola #{params[:nombre]}!</h1>
+		HTML
+	else
+		<<-HTML
+			<h1>Hola desconocido</h1>
+		HTML
+	end
 end
 
