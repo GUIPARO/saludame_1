@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  if params[:nombre] && params[:nombre] != nil
+  if params[:nombre] && params[:nombre] != ""
 		<<-HTML
 			<h1>Hola #{params[:nombre].capitalize}!</h1>
 		HTML
