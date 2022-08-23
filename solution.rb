@@ -5,13 +5,14 @@ require "sinatra/reloader" if development?
 # Definir ruta --> get post patch put & delete
 
 get '/' do
-  if params[:nombre]
-    @nombre = params[:nombre]
+  if params[:nombre] == true 
     <<-HTML
        <h1>Hola #{params[:nombre]}!</h1>
     HTML
   else
-    "Hola desconocido"
+    <<-HTML
+       <h1>"Hola desconocido"</h1>
+    HTML
   end
 end
 
